@@ -31,7 +31,6 @@
       html {
         scroll-behavior: smooth;
       }
-      
       header h1 {
         font-size: 3.5rem;
         font-weight: 800;
@@ -50,26 +49,64 @@
         position: fixed;
         top: 0;
         width: 100%;
-        padding: 20px;
+        background: rgba(10, 20, 25, 0.9);
         backdrop-filter: blur(10px);
-        background: rgba(0, 0, 0, 0.3);
-        display: flex;
-        justify-content: center;
-        gap: 40px;
         z-index: 1000;
       }
 
-      nav a {
+      .nav-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 40px;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 40px;
+      }
+
+      .nav-links a {
         text-decoration: none;
         color: white;
         font-weight: 500;
         transition: 0.3s;
       }
 
-      nav a:hover {
+      .nav-links a:hover {
         color: #00ffcc;
       }
 
+      .hamburger {
+        display: none;
+        font-size: 24px;
+        cursor: pointer;
+        color: white;
+      }
+
+      /* Mobile */
+      @media (max-width: 768px) {
+        .hamburger {
+          display: block;
+        }
+
+        .nav-links {
+          position: absolute;
+          top: 60px;
+          left: 0;
+          width: 100%;
+          background: rgba(10, 20, 25, 0.95);
+          flex-direction: column;
+          align-items: center;
+          gap: 20px;
+          padding: 20px 0;
+          display: none;
+        }
+
+        .nav-links.active {
+          display: flex;
+        }
+      }
       section {
         padding: 100px 10%;
       }
@@ -142,14 +179,22 @@
 
   <body>
     <nav>
-      <a href="#about">About</a>
-      <a href="#objective">Objective</a>
-      <a href="#seniordesign">Senior Design</a>
-      <a href="#projects">Projects</a>
-      <a href="#leadership">Leadership</a>
-      <a href="#gened">Gen Ed</a>
-      <a href="#reflection">Reflection</a>
-      <a href="#contact">Contact</a>
+      <div class="nav-container">
+        <div class="logo">Tian Jun Teoh</div>
+
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+        <div class="nav-links" id="navLinks">
+          <a href="#about">About</a>
+          <a href="#objective">Objective</a>
+          <a href="#seniordesign">Senior Design</a>
+          <a href="#projects">Projects</a>
+          <a href="#leadership">Leadership</a>
+          <a href="#gened">Gen Ed</a>
+          <a href="#reflection">Reflection</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
     </nav>
 
     <header>
@@ -495,6 +540,9 @@
       const appearOptions = {
         threshold: 0.3,
       };
+      function toggleMenu() {
+        document.getElementById("navLinks").classList.toggle("active");
+      }
 
       const appearOnScroll = new IntersectionObserver(function (
         entries,
