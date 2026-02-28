@@ -1,0 +1,515 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tian Jun Teoh | Portfolio</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+        color: white;
+        overflow-x: hidden;
+      }
+
+      header {
+        text-align: center;
+        padding: 120px 20px 80px 20px;
+      }
+
+      header h1 {
+        font-size: 3.5rem;
+        font-weight: 800;
+        background: linear-gradient(90deg, #00f5ff, #00ff95);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      header p {
+        margin-top: 20px;
+        font-size: 1.2rem;
+        opacity: 0.8;
+      }
+
+      nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        padding: 20px;
+        backdrop-filter: blur(10px);
+        background: rgba(0, 0, 0, 0.3);
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        z-index: 1000;
+      }
+
+      nav a {
+        text-decoration: none;
+        color: white;
+        font-weight: 500;
+        transition: 0.3s;
+      }
+
+      nav a:hover {
+        color: #00ffcc;
+      }
+
+      section {
+        padding: 100px 10%;
+      }
+
+      h2 {
+        font-size: 2.2rem;
+        margin-bottom: 40px;
+        border-left: 4px solid #00ffcc;
+        padding-left: 15px;
+      }
+
+      .card {
+        background: rgba(255, 255, 255, 0.05);
+        padding: 30px;
+        margin-bottom: 30px;
+        border-radius: 20px;
+        backdrop-filter: blur(20px);
+        transition: 0.4s;
+      }
+
+      .card:hover {
+        transform: translateY(-10px);
+        background: rgba(255, 255, 255, 0.1);
+      }
+
+      ul {
+        margin-top: 15px;
+        padding-left: 20px;
+      }
+
+      li {
+        margin-bottom: 8px;
+      }
+
+      footer {
+        text-align: center;
+        padding: 40px;
+        background: rgba(0, 0, 0, 0.4);
+        margin-top: 80px;
+      }
+
+      .button {
+        display: inline-block;
+        padding: 12px 25px;
+        background: linear-gradient(90deg, #00f5ff, #00ff95);
+        color: black;
+        font-weight: 600;
+        border-radius: 30px;
+        text-decoration: none;
+        margin-top: 20px;
+        transition: 0.3s;
+      }
+
+      .button:hover {
+        transform: scale(1.05);
+      }
+
+      .fade {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 1s ease;
+      }
+
+      .fade.show {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#objective">Objective</a>
+      <a href="#seniordesign">Senior Design</a>
+      <a href="#projects">Projects</a>
+      <a href="#leadership">Leadership</a>
+      <a href="#gened">Gen Ed</a>
+      <a href="#reflection">Reflection</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <header>
+      <h1>Tian Jun Teoh</h1>
+      <p>
+        Computer Engineering Student | Embedded Systems | Architecture |
+        Full-Stack Development
+      </p>
+      <a href="#projects" class="button">View My Work</a>
+    </header>
+
+    <section id="about" class="fade">
+      <h2>About Me</h2>
+      <div class="card">
+        <p>
+          I am a Computer Engineering student at Iowa State University from
+          Malaysia. My focus includes embedded systems, processor design, and
+          secure web applications. Through technical projects and leadership
+          roles as a Teaching Assistant, I have developed strong engineering
+          fundamentals, ethical awareness, and professional communication
+          skills.
+        </p>
+      </div>
+    </section>
+
+    <section id="objective" class="fade">
+      <h2>Career Objective</h2>
+      <div class="card">
+        <p>
+          My goal is to become a responsible and technically fluent engineer who
+          can design and build systems that create real-world impact. I am
+          particularly interested in embedded systems, hardware-cloud
+          integration, and intelligent infrastructure technologies. In the short
+          term, I aim to gain strong hands-on industry experience in the United
+          States to deepen my technical foundation and professional maturity. In
+          the long term, I plan to return to Malaysia and contribute to the
+          growth of engineering innovation and smart infrastructure development
+          in my home country. I aspire not only to be successful in my field,
+          but to earn respect through competence, integrity, and meaningful
+          contribution.
+        </p>
+      </div>
+    </section>
+    <section id="seniordesign" class="fade">
+      <h2>Senior Design – Smart Parking System 2.0</h2>
+
+      <div class="card">
+        <h3>Project Overview</h3>
+        <p>
+          Smart Parking System 2.0 is an AI-enhanced, vision-based IoT parking
+          management platform designed for campus-scale deployment. The system
+          integrates embedded edge devices, AI-based vehicle detection,
+          cloud-hosted backend services, and a mobile application to provide
+          real-time parking occupancy, navigation, and administrative oversight.
+        </p>
+
+        <h3>System Architecture</h3>
+        <ul>
+          <li>
+            Raspberry Pi edge devices performing AI inference using PyTorch
+          </li>
+          <li>Camera-based parking space and license plate detection</li>
+          <li>Dockerized backend services using Spring Boot</li>
+          <li>Reverse proxy configuration for secure campus access</li>
+          <li>MySQL database for persistent storage</li>
+          <li>React Native mobile application for users and administrators</li>
+        </ul>
+
+        <h3>My Role</h3>
+        <p>
+          As part of the hardware organization and component interaction team, I
+          work on embedded system integration, edge device coordination, and
+          ensuring reliable data transfer between Raspberry Pi units and backend
+          services via HTTP protocols. I contribute to system-level debugging,
+          hardware setup, and validation of real-time parking data transmission.
+        </p>
+
+        <h3>Engineering Skills Developed</h3>
+        <ul>
+          <li>Edge AI deployment constraints on embedded hardware</li>
+          <li>Hardware–cloud system integration</li>
+          <li>Containerized backend deployment (Docker)</li>
+          <li>Distributed system coordination</li>
+          <li>
+            Collaborative engineering within a 7-member multidisciplinary team
+          </li>
+          <li>Client communication and requirement adaptation</li>
+        </ul>
+
+        <h3>Impact and Contribution</h3>
+        <p>
+          The project advances a prototype into a campus-ready intelligent
+          parking infrastructure. By combining AI vision, IoT sensing, cloud
+          services, and mobile navigation, the system demonstrates scalable
+          smart-city technology capable of reducing search time and congestion
+          while improving user experience.
+        </p>
+        <h3>Project Repository</h3>
+
+        <div style="margin-top: 20px">
+          <a
+            href="https://git.ece.iastate.edu/sd/sddec25-09"
+            target="_blank"
+            class="button"
+          >
+            Senior Design Repository →
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="gened" class="fade">
+      <h2>General Education Reflection</h2>
+      <div class="card">
+        <p>
+          Although I completed my general education coursework in Malaysia prior
+          to transferring, communication studies had the greatest impact on my
+          development as a person and engineer. As someone who was naturally
+          introverted, I initially found public speaking and presentations
+          challenging. Through structured communication training, I learned how
+          to organize ideas clearly, express technical concepts effectively, and
+          present confidently in front of an audience.
+        </p>
+
+        <p style="margin-top: 15px">
+          These skills have directly influenced my performance in engineering
+          courses, team projects, and leadership roles as a Teaching Assistant.
+          Strong communication has allowed me to collaborate effectively,
+          explain complex technical topics, and contribute meaningfully within
+          multidisciplinary teams. This foundation continues to shape how I
+          approach both technical and professional challenges.
+        </p>
+      </div>
+    </section>
+
+    <section id="reflection" class="fade">
+      <h2>Cumulative Reflection</h2>
+      <div class="card">
+        <p>
+          When I first began my engineering journey, I was technically curious
+          but personally reserved. English is my second language, and adapting
+          to a new academic environment in the United States required
+          resilience, discipline, and persistence. Over time, I strengthened not
+          only my technical foundations in embedded systems, architecture, and
+          software development, but also my confidence in expressing ideas
+          clearly and professionally.
+        </p>
+
+        <p style="margin-top: 15px">
+          Through demanding coursework, high-pressure projects, and leadership
+          responsibilities as a Teaching Assistant, I developed greater
+          maturity, adaptability, and mental resilience. Working under stress
+          improved my problem-solving ability and taught me how to remain
+          composed in challenging situations. I learned to collaborate
+          effectively within diverse teams and communicate technical ideas
+          clearly, even when navigating language barriers.
+        </p>
+
+        <p style="margin-top: 15px">
+          Throughout this journey, I also gained a deeper understanding of
+          ethical responsibility in engineering. Technical solutions must
+          consider public safety, data privacy, sustainability, and societal
+          impact. I’ve come to realize that strong engineering isn’t just about
+          technical correctness, but also about accountability and long-term
+          impact. The challenges I faced did not limit me, they strengthened me
+          into a more confident, responsible, and capable engineer.
+        </p>
+      </div>
+    </section>
+
+    <section id="leadership" class="fade">
+      <h2>Leadership & Teaching</h2>
+
+      <div class="card">
+        <h3>Teaching Assistant and Lab Lead TA – CPRE 281 (Digital Logic)</h3>
+
+        <ul>
+          <li>
+            Led lab sections for a core digital logic course serving 100+
+            students
+          </li>
+          <li>
+            Mentored students on circuit design, FSM implementation, and
+            hardware debugging
+          </li>
+          <li>
+            Enforced academic integrity and grading consistency across multiple
+            sections
+          </li>
+          <li>
+            Designed structured explanations to simplify complex hardware
+            concepts
+          </li>
+          <li>
+            Provided targeted support to students struggling with Verilog and
+            logic design
+          </li>
+        </ul>
+
+        <p style="margin-top: 15px; opacity: 0.85">
+          Through this role, I developed leadership presence, technical
+          communication skills, and the ability to guide students through
+          high-pressure debugging situations.
+        </p>
+      </div>
+    </section>
+
+    <section id="projects" class="fade">
+      <h2>Technical Projects</h2>
+
+      <div class="card">
+        <h3>RISC-V Processor Design – CPRE 381 Final Project</h3>
+        <ul>
+          <li>
+            Implemented multi-stage pipelined RISC-V processor architecture
+          </li>
+          <li>
+            Designed instruction decoding logic and control signal generation
+          </li>
+          <li>
+            Implemented forwarding and hazard detection mechanisms to resolve
+            pipeline conflicts
+          </li>
+          <li>
+            Analyzed performance tradeoffs between pipeline depth and hardware
+            complexity
+          </li>
+        </ul>
+
+        <a
+          href="https://github.com/Jun0074/cpre3810_Proj1Part2_HW.git"
+          target="_blank"
+          class="button"
+        >
+          View CPRE 381 Project →
+        </a>
+      </div>
+
+      <div class="card">
+        <h3>AI-Integrated Puzzle Game – CPRE 388</h3>
+        <ul>
+          <li>
+            Developed Kotlin-based puzzle application with Firebase cloud
+            backend
+          </li>
+          <li>
+            Implemented AI-driven puzzle generation algorithms with dynamic
+            difficulty scaling
+          </li>
+          <li>
+            Integrated real-time database synchronization for persistent game
+            state management
+          </li>
+          <li>
+            Designed modular application architecture for scalability and
+            maintainability
+          </li>
+        </ul>
+
+        <a
+          href="https://github.com/CHemmestad/CPRE388_Project2.git"
+          target="_blank"
+          class="button"
+        >
+          View CPRE 388 Project →
+        </a>
+      </div>
+      <div class="card">
+        <h3>Autonomous "Among Us" Game – CPRE 288 CyBot System</h3>
+
+        <ul>
+          <li>
+            Engineered a fully automated physical "Among Us" style game using
+            the CyBot platform
+          </li>
+          <li>
+            Integrated ultrasonic sensors, timers, ADC modules, and motor
+            control systems
+          </li>
+          <li>
+            Implemented real-time state machine logic for autonomous navigation
+            and interaction
+          </li>
+          <li>
+            Configured low-level hardware registers for precise peripheral
+            control
+          </li>
+          <li>
+            Designed modular embedded C architecture for maintainability and
+            debugging
+          </li>
+          <li>
+            Performed extensive system-level debugging across hardware and
+            firmware layers
+          </li>
+        </ul>
+
+        <p style="margin-top: 15px; opacity: 0.85">
+          This project required deep integration of hardware peripherals and
+          real-time logic. I invested significant time understanding datasheets,
+          register configuration, and sensor calibration to achieve reliable
+          autonomous behavior.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Full-Stack Web Application – COM S 319</h3>
+        <ul>
+          <li>Designed responsive UI using HTML, CSS, JavaScript</li>
+          <li>Implemented dynamic client-side logic</li>
+          <li>Integrated backend APIs</li>
+          <li>Built secure authentication system</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact" class="fade">
+      <h2>Contact</h2>
+      <div class="card">
+        <p>Email: teoh@iastate.edu</p>
+        <p>
+          GitHub:
+          <a
+            href="https://github.com/Jun0074"
+            target="_blank"
+            style="color: #00ffcc"
+          >
+            github.com/Jun0074
+          </a>
+        </p>
+        <a href="resume-mode-2026-2-27.pdf" target="_blank" class="button">
+          Download Resume →
+        </a>
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2026 Tian Jun Teoh | Engineered with Precision</p>
+    </footer>
+
+    <script>
+      const faders = document.querySelectorAll(".fade");
+
+      const appearOptions = {
+        threshold: 0.3,
+      };
+
+      const appearOnScroll = new IntersectionObserver(function (
+        entries,
+        observer,
+      ) {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) {
+            return;
+          } else {
+            entry.target.classList.add("show");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, appearOptions);
+
+      faders.forEach((fader) => {
+        appearOnScroll.observe(fader);
+      });
+    </script>
+  </body>
+</html>
